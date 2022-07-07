@@ -51,13 +51,13 @@
                 <div class="col">
                     <c:forEach var="obj" items="${posts}" varStatus="status">
                             <div class="row border-bottom">
-                                <p class="fs-3 fw-bolder"><c:out ${obj.getFrom()}/></p>
-                                <p class="fs-6 fw-lighter"><c:out ${obj.getDate()}/></p>
-                                <p class="fs-5">返信：<c:out ${obj.getTo()}/></p>
-                                <p class="fs-4 fw-bold">曲名:<c:out ${obj.getName()}/></p>
-                                <p class="fs-4">アーティスト：<c:out ${obj.getArtist()}/></p>
-                                <p><c:out ${obj.getComment()}/></p>
-                                <c:out "<a href=\"" + ${obj.getUrl()} + "\""><p>URL</p></a>
+                                <p class="fs-3 fw-bolder"><c:out value="${obj.getFrom()}"/></p>
+                                <p class="fs-6 fw-lighter"><c:out value="${obj.getDate()}"/></p>
+                                <p class="fs-5">返信：<c:out value="${obj.getTo()}"/></p>
+                                <p class="fs-4 fw-bold">曲名:<c:out value="${obj.getName()}"/></p>
+                                <p class="fs-4">アーティスト：<c:out value="${obj.getArtist()}"/></p>
+                                <p><c:out value="${obj.getComment()}"/></p>
+                                <c:out value="<a href=\"" + ${obj.getUrl()} + "\""/><p>URL</p></a>
                             </div>
                     </c:forEach>
                 </div>
