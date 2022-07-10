@@ -65,7 +65,6 @@ public class Home extends HttpServlet {
             pb.setArtist(rs.getString("artist"));
             pb.setName(rs.getString("title"));
             pb.setComment(rs.getString("comment"));
-            pb.setUrl(rs.getString("url"));
             pb.setDate(rs.getDate("time"));
             posts.add(pb);
         }

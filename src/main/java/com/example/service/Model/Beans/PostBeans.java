@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class PostBeans implements Serializable {
     private int from, to;
-    private String artist, name, comment, url;
+    private String artist, name, comment;
     private Date date;
 
     public Date getDate() {
@@ -54,14 +54,6 @@ public class PostBeans implements Serializable {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public String getUrl() {
-        return this.url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
     public static Object getDeclaredConstructor() {

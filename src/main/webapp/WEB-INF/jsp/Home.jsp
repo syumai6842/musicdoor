@@ -57,11 +57,6 @@
                                 <p class="fs-4 fw-bold">曲名：<c:out value="${obj.getName()}"/></p>
                                 <p class="fs-4">アーティスト：<c:out value="${obj.getArtist()}"/></p>
                                 <p><c:out value="${obj.getComment()}"/></p>
-
-                                <c:out value="<a href=\"" />
-                                <c:out value="${obj.getUrl()}" />
-                                <c:out value="\"" />
-                                <c:out value="</a>" />
                             </div>
                     </c:forEach>
                 </div>
