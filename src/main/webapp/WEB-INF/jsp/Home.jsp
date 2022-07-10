@@ -53,11 +53,15 @@
                             <div class="row border-bottom">
                                 <p class="fs-3 fw-bolder"><c:out value="${obj.getFrom()}"/></p>
                                 <p class="fs-6 fw-lighter"><c:out value="${obj.getDate()}"/></p>
-                                <p class="fs-5">返信：<c:out value="${obj.getTo()}"/></p>
-                                <p class="fs-4 fw-bold">曲名:<c:out value="${obj.getName()}"/></p>
+                                <p class="fs-5"><c:out value="${obj.getTo()}"/>:に返信</p>
+                                <p class="fs-4 fw-bold">曲名：<c:out value="${obj.getName()}"/></p>
                                 <p class="fs-4">アーティスト：<c:out value="${obj.getArtist()}"/></p>
                                 <p><c:out value="${obj.getComment()}"/></p>
-                                <c:out value="<a href=\"" + ${obj.getUrl()} + "\""/><p>URL</p></a>
+
+                                <c:out value="<a href=\"" />
+                                <c:out value="${obj.getUrl()}" />
+                                <c:out value="\"" />
+                                <c:out value="</a>" />
                             </div>
                     </c:forEach>
                 </div>
