@@ -24,7 +24,14 @@
     <url-pattern>/result</url-pattern>
   </servlet-mapping>
 
-
+<servlet>
+  <servlet-name>makeac</servlet-name>
+  <servlet-class>com.example.service.Controller.MakeAc</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>makeac</servlet-name>
+  <url-pattern>/makeac</url-pattern>
+</servlet-mapping>
 
 
 
