@@ -27,8 +27,10 @@ public class MakeAc extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+
         String id = request.getParameter("userid");
-        String pass = request.getParameter("pass");
+        String pass = request.getParameter("password");
         String username = request.getParameter("username");
 
         try {
@@ -41,7 +43,7 @@ public class MakeAc extends HttpServlet {
             Logger logger = Logger.getLogger("showresult");
             logger.info(rs.toString());
 
-            sql = "insert into accounts(\"id\",\"userid\",\"pass\",\"username\") values(null,?,?,?)";
+            sql = "insert into accounts (\"id\",\"userid\",\"pass\",\"username\") values (null,?,?,?)";
             PreparedStatement pstmt = con.prepareStatement(sql);
 
             pstmt.setString(1, id);
