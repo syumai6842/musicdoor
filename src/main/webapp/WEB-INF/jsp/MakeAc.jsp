@@ -1,9 +1,10 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=Shift_JIS" %>
+<% request.setCharacterEncoding("Shift_JIS"); %>
 
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="Shift_JIS" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="share music you like!!" />
         <meta name="author" content="syumai" />
