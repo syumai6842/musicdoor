@@ -30,7 +30,7 @@
                 <div class="col"></div>
                 <div class="col border justify-content-md-center">
                     <h1 class="fw-bolder">アカウント作成</h1>
-                    <form action="musicdoor/makeac" method="post" class="form-inline">
+                    <form action="makeac" method="post" class="form-inline">
                         
                         <input type="text" class=" form-control form-control-sm" placeholder="ユーザーID" name="userid">
                         <input type="text" class=" form-control form-control-sm" placeholder="パスワード" name="password">

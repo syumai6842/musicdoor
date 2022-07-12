@@ -2,8 +2,10 @@ package com.example.service.Controller;
 
 import java.io.IOException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.logging.Logger;
 
 import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
@@ -25,13 +27,30 @@ public class MakeAc extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String id = request.getParameter("userid");
+        String pass = request.getParameter("pass");
+        String username = request.getParameter("username");
+
         try {
             Connection con = ds.getConnection();
-            Statement stmt = con.createStatement();
-            String sql = ""
+            String sql = "select count(userid) from accounts where userid = ?";
+            PreparedStatement checkstmt = con.prepareStatement(sql);
+            checkstmt.setString(1, id);
+            ;
+            ResultSet rs = checkstmt.executeQuery();
+            Logger logger = Logger.getLogger("showresult");
+            logger.info(rs.toString());
 
+            sql = "insert into accounts(\"id\",\"userid\",\"pass\",\"username\") values(null,?,?,?)";
+            PreparedStatement pstmt = con.prepareStatement(sql);
+
+            pstmt.setString(1, id);
+            pstmt.setString(2, pass);
+            pstmt.setString(3, username);
+
+            pstmt.execute();
+            pstmt.close();
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

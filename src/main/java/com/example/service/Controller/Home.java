@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
@@ -69,8 +68,9 @@ public class Home extends HttpServlet {
             posts.add(pb);
         }
 
-        Logger logger = Logger.getLogger("posts");
-        logger.info(posts.get(0).getName());
+        con.close();
+        stmt.close();
+        rs.close();
 
         return posts;
     }
