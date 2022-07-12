@@ -1,7 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="java.util.*" %>
-<%@ page import="com.example.service.Model.Beans.PostBeans" %>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -30,22 +27,18 @@
 
         <div class="container">
             <div class="row">
-                <div class="col border-end">
-                    <form action="MakeAC" method="post" class="form-inline">
+                <div class="col"></div>
+                <div class="col border justify-content-md-center">
+                    <h1 class="fw-bolder">アカウント作成</h1>
+                    <form action="musicdoor/makeac" method="post" class="form-inline">
                         
-                        <input type="text" class=" form-control form-control-sm" placeholder="ユーザー名" name="musictitle">
-                        <input type="text" class=" form-control form-control-sm" placeholder="パスワード" name="artistname">
-                        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdXBNwgAAAAACm3dZ6uEkWkdZFqS0YHuizPtNBP"></script>
-                        <script>
-                            grecaptcha.enterprise.ready(function() {
-                                grecaptcha.enterprise.execute('6LdXBNwgAAAAACm3dZ6uEkWkdZFqS0YHuizPtNBP', {action: 'login'}).then(function(token) {
-
-                                });
-                            });
-                        </script>
-                        <input class="btn" type="submit" value="作成">
+                        <input type="text" class=" form-control form-control-sm" placeholder="ユーザーID" name="userid">
+                        <input type="text" class=" form-control form-control-sm" placeholder="パスワード" name="password">
+                        <input type="text" class=" form-control form-control-sm" placeholder="ユーザー名" name="username">
+                        <input id="submitbutton" class="btn" type="submit" value="作成">
                     </form>
                 </div>
+                <div class="col"></div>
             </div>
         </div>
 

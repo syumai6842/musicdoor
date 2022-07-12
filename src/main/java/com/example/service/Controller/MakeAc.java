@@ -1,6 +1,9 @@
 package com.example.service.Controller;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
@@ -22,6 +25,15 @@ public class MakeAc extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        try {
+            Connection con = ds.getConnection();
+            Statement stmt = con.createStatement();
+            String sql = ""
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
     }
 }
