@@ -1,10 +1,12 @@
-<%@ page contentType="text/html; charset=Shift_JIS" %>
-<% request.setCharacterEncoding("Shift_JIS"); %>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<% request.setCharacterEncoding("UTF-8"); %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.*" %>
 
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <meta charset="Shift_JIS" />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="share music you like!!" />
         <meta name="author" content="syumai" />
@@ -28,18 +30,16 @@
 
         <div class="container">
             <div class="row">
-                <div class="col"></div>
                 <div class="col border justify-content-md-center">
                     <h1 class="fw-bolder">アカウント作成</h1>
                     <form action="makeac" method="post" class="form-inline">
-                        
+                        <p><c:out value="${msg}" /></p>
                         <input type="text" class=" form-control form-control-sm" placeholder="ユーザーID" name="userid">
                         <input type="text" class=" form-control form-control-sm" placeholder="パスワード" name="password">
                         <input type="text" class=" form-control form-control-sm" placeholder="ユーザー名" name="username">
                         <input id="submitbutton" class="btn" type="submit" value="作成">
                     </form>
                 </div>
-                <div class="col"></div>
             </div>
         </div>
 

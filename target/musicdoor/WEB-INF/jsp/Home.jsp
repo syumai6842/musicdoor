@@ -36,7 +36,7 @@
         <div class="container border-end pt-3">
             <div class="row">
                 <!--POST contents-->
-                <div class="col border-end">
+                <div class="col border">
                     <form action="#" method="post" class="form-inline">
                         
                         <input type="text" class=" form-control form-control-sm" placeholder="曲名" name="musictitle">
